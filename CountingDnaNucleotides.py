@@ -6,6 +6,12 @@ import argparse
 import os.path
 
 def count_dna_nucleotides(sequence):
+	"""
+	Counts each nucleotide in the DNA sequence and prints them in the following order: A,C,G,T. 
+	Returns a dictionary with nucleotide as key and its count as value. 
+	Param:
+		sequence {str} : The DNA sequence of which nucleotides to be counted.  
+	"""
     counts = {'A':0,'C':0,'G':0,'T':0}
     for i in xrange(0,len(sequence)):
         if sequence[i] in counts:
@@ -17,6 +23,9 @@ def count_dna_nucleotides(sequence):
     return counts
 
 def parse_arg():
+	"""
+	Parses arguments.
+	"""
     parser = argparse.ArgumentParser(description="Counting dna nucleotide in a sequence")
     parser.add_argument("--seq",help="DNA sequence of which nucleotides to be counted", type=str, required=False)
     parser.add_argument("--file",help="Path to the input file containing DNA sequence(s) of which nucleotides to be counted", type=str, required=False)
