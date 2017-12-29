@@ -3,7 +3,6 @@
 """
 
 import argparse
-import os.path
 
 def count_total_rabbits(n,k):
 	"""
