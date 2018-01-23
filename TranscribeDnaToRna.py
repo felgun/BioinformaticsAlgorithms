@@ -20,10 +20,9 @@ def parse_arg():
 	Parses the arguments.
 	"""
 	parser = argparse.ArgumentParser(description="Transcribing DNA into RNA by replacing 'T' with 'U'")
-	parser.add_argument("--seq",help="DNA sequence to be transcribed into RNA",required=False)
+	parser.add_argument("--seq",help="DNA sequence to be transcribed into RNA", type=str,required=False)
 	parser.add_argument("--file",help="Path to the input file containing the" +
-
-							" DNA sequence(s) to be transcribed into RNA",required=False)
+							" DNA sequence(s) to be transcribed into RNA",type=str,required=False)
 	return parser.parse_args()
 
 def main():
